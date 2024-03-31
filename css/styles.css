@@ -1,0 +1,200 @@
+/* 
+fuentes primero 
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 
+codigo de practica
+
+*/
+.teoriaFlex {
+    display: flex;
+    width: 100%;
+    height: 400px;
+    background-color: black;
+    justify-content: space-evenly;
+    /* 
+Flex vox trabaja con dos propiedades, 
+Direccion y flexibilidad
+*/
+    /* Para que el texto se contenga dentro del contenedor*/
+    /* overflow: hidden; */
+    /* EL eje princial es horizontal*/
+    /* flex-direction: column; */
+    /* el eje principal es vertical*/
+    flex-direction: row;
+    /*los elementos se inician del lado derecho, modo espejo*/
+    /* flex-direction: row-reverse; */
+
+    /*por defecto y los elementos se achican para mantener sus posicion*/
+    /* flex-wrap: nowrap; */
+    /* Cuando los elementos no pueden mantenerse en la pantalla , los elementos se tiran para abajo*/
+    flex-wrap: wrap;
+
+    /* 
+    Movimientos que afectan a todo el contenedor
+    */
+
+    /*  justify-content es para cuando estamos en rows nos permite mover los elementos en sentido horizontal */
+
+    /* me los centra */
+    /* justify-content: center; */
+    /* todos hacia la derecha */
+    /* justify-content: flex-end; */
+    /* se van hacia la izquierda */
+    /* justify-content: flex-start; */
+    /*space-beteewn, los elementos del costado se pegan bien al costado y los del medio se separan equiitativamente*/
+    /* justify-content: space-between; */
+    /* space-around, genera margen entre la pantalla el contenedor primero y final, y entre los del medio genera espacio que es el doble que de los del costado */
+    /* justify-content: space-around; */
+    /* Deja el mismo esoacio entre todos los contenedores y con los cotados de la pamtalla */
+    /* justify-content:space-evenly; */
+
+    /*  con el aling-items mueve los elementos de arriba hacia abajo */
+
+    /* los mueve hacia el final */
+    align-items: center;
+
+    /* solo funciona cuando los elementos tiene la propiedad wrap */
+    /* espacio alrededor*/
+    /* align-content: space-around; */
+    /* espacio entre ellos, los envia bien al costado*/
+    /* align-content: space-between ; */
+
+}
+
+.teoriaFlex div {
+    width: 6.25rem;
+    height: 6.25rem;
+
+}
+
+.teoriaFlex .div1 {
+    background-color: rgb(82, 198, 198);
+
+    /* nos permite trabajar sobre un elemnto y que rompa con el flujo de todos */
+    align-self: flex-end;
+    /* el order es para darle un orden a los elementos */
+    order: 5;
+}
+
+.teoriaFlex .div2 {
+    background-color: aqua;
+    order: 2;
+}
+
+.teoriaFlex .div3 {
+    background-color: rgb(141, 189, 189);
+    align-self: flex-start;
+    order: 3;
+}
+
+.teoriaFlex .div4 {
+    background-color: rgb(17, 18, 18);
+    order: 4;
+}
+
+.teoriaFlex .div5 {
+    background-color: rgb(40, 67, 67);
+    order: 1;
+}
+
+.teoriaFlex .div6 {
+    background-color: rgb(39, 7, 88);
+    order: 6;
+}
+
+
+
+/* 
+codigo vida real
+*/
+
+.headerIndex {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 20px;
+    justify-content: space-between;
+    height: 200px;
+    /* pisition fixed genera una segunda capa que se superpone sobre los otros elementos */
+    /* position: fixed; */
+    /* position sticky toma lo mejor de fixed y relative, se mantiene siempre arriba y toma su lugar siempre */
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.navBar {
+    display: flex;
+    /* propiedad que genera espacios */
+    gap: 20px;
+}
+
+.navBar li {
+    list-style-type: none;
+}
+
+.navBar a {
+    color: green;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.seccionPrincipal {
+    width: 100%;
+    height: 37.5rem;
+    background-image: url("../assets/si4.jpeg");
+    background-position: center;
+    display: flex;
+    /* con columna */
+    flex-direction: column;
+    /* justify-content te mueve los elementos de manera vertical */
+    justify-content: center;
+    /* te mueve los elementos de manera horizontal */
+    align-items: center;
+}
+
+.seccionPrincipal div {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.233);
+    padding: 40px;
+}
+
+.card {
+    width: 200px;
+    height: 250px;
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.wsp {
+    position: fixed;
+    bottom: 1.25rem;
+    right: 1.25rem;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+}
+
+/* position absolute toma como posicion original el html, genezZra una segunda capa, siempre que coloque un absolute debo colocar al contenedor un position relative  */
+
+.corazon {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
